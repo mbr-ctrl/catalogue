@@ -17,4 +17,6 @@ class Data {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setString('catalogue', json.encode(data));
   }
+
+
 }

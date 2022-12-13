@@ -144,27 +144,32 @@ class _AddItemState extends State<AddItem> {
             ),
             const SizedBox(height: 30,),
             ElevatedButton(
-              child: const Text('Ajouter une image'),
+              onPressed: getImage,
               style: ElevatedButton.styleFrom(
-                primary: Colors.teal,
-                onPrimary: Colors.white,
-                shape: const BeveledRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(5))),
-                textStyle: const TextStyle(
-                    color: Colors.black,
-                    fontSize: 40,
-                    fontStyle: FontStyle.italic
-                ),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 40.0, vertical: 20.0),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0)),
+                  primary: Colors.purple),
+              child: const Text(
+                "Ajouter une image",
+                style: TextStyle(color: Colors.white, fontSize: 18),
               ),
-              onPressed: getImage
             ),
-            TextButton(
-              style: TextButton.styleFrom(
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.all(16.0),
-                textStyle: const TextStyle(fontSize: 20),
+            // Spacing
+            Container(height: 20.0),
+            ElevatedButton(
+              onPressed: saveData,
+              style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 40.0, vertical: 20.0),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0)),
+                  primary: Colors.purple),
+              child: const Text(
+                "Valider",
+                style: TextStyle(color: Colors.white, fontSize: 18),
               ),
-              onPressed: () {},
-              child: const Text('Valider'),
             ),
           ],
         ),
